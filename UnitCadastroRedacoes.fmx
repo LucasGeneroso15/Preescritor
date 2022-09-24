@@ -1,0 +1,111 @@
+object FrmCadastroRedacao: TFrmCadastroRedacao
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 553
+  ClientWidth = 835
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object PanelCenter: TPanel
+    Align = Center
+    Size.Width = 730.000000000000000000
+    Size.Height = 469.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object PanelTop: TPanel
+      Align = Top
+      Size.Width = 730.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LblCadastroRedacao: TLabel
+        Align = Center
+        StyledSettings = [Family, FontColor]
+        Size.Width = 307.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 26.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Cadastro de reda'#231#245'es'
+        TabOrder = 0
+      end
+    end
+    object editTema: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 32.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 409.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Tema da reda'#231#227'o.....'
+    end
+    object editInstituicao: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 32.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 409.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Institui'#231#227'o........'
+    end
+    object editData: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 32.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Data....'
+    end
+    object btnAdicionarRD: TButton
+      Position.X = 504.000000000000000000
+      Position.Y = 96.000000000000000000
+      TabOrder = 8
+      Text = 'Adicionar'
+    end
+    object btnAlterarRD: TButton
+      Position.X = 600.000000000000000000
+      Position.Y = 96.000000000000000000
+      TabOrder = 7
+      Text = 'Alterar'
+    end
+    object btnExcluirRD: TButton
+      Position.X = 504.000000000000000000
+      Position.Y = 136.000000000000000000
+      TabOrder = 6
+      Text = 'Excluir'
+    end
+    object btnCancelarRD: TButton
+      Position.X = 601.000000000000000000
+      Position.Y = 136.000000000000000000
+      TabOrder = 5
+      Text = 'Cancelar'
+    end
+    object btnSalvarRD: TButton
+      Position.X = 552.000000000000000000
+      Position.Y = 64.000000000000000000
+      TabOrder = 4
+      Text = 'Salvar'
+    end
+    object LbRedacao: TListBox
+      Position.X = 32.000000000000000000
+      Position.Y = 232.000000000000000000
+      Size.Width = 665.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 661.000000000000000000
+      Viewport.Height = 196.000000000000000000
+    end
+  end
+end

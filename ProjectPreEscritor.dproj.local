@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/07/27 19:02:35.000.607,=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/07/27 20:22:58.000.715,C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11\ee\Pré escritor\Unit1.pas=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11\ee\Pré escritor\UnitEnviarRedacoesAluno.pas</Transaction>
+    <Transaction>2022/07/27 20:22:58.000.715,C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11\ee\Pré escritor\Unit1.fmx=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11\ee\Pré escritor\UnitEnviarRedacoesAluno.fmx</Transaction>
+    <Transaction>2022/08/02 11:38:51.000.401,=C:\Users\aluno\Desktop\Pré escritor-f11-2\ee\Pré escritor\Unit2.pas</Transaction>
+    <Transaction>2022/08/02 12:08:55.000.171,C:\Users\aluno\Desktop\Pré escritor-f11-2\ee\Pré escritor\UnitAtribuicoesp.pas=C:\Users\aluno\Desktop\Pré escritor-f11-2\ee\Pré escritor\Unit2.pas</Transaction>
+    <Transaction>2022/08/02 12:08:55.000.171,C:\Users\aluno\Desktop\Pré escritor-f11-2\ee\Pré escritor\UnitAtribuicoesp.fmx=C:\Users\aluno\Desktop\Pré escritor-f11-2\ee\Pré escritor\Unit2.fmx</Transaction>
+    <Transaction>2022/08/04 11:54:15.000.201,=C:\Users\aluno\Desktop\Pré escritor-f11-4\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/04 12:09:34.000.204,C:\Users\aluno\Desktop\Pré escritor-f11-4\ee\Pré escritor\Unitdmbancodados.dfm=C:\Users\aluno\Desktop\Pré escritor-f11-4\ee\Pré escritor\Unit1.dfm</Transaction>
+    <Transaction>2022/08/04 12:09:34.000.203,C:\Users\aluno\Desktop\Pré escritor-f11-4\ee\Pré escritor\Unitdmbancodados.pas=C:\Users\aluno\Desktop\Pré escritor-f11-4\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/11 11:55:02.000.666,=C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/11 11:55:51.000.640,C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unit1.fmx=C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unitfrmadmin.fmx</Transaction>
+    <Transaction>2022/08/11 11:55:51.000.640,C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unit1.pas=C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unitfrmadmin.pas</Transaction>
+    <Transaction>2022/08/11 12:00:50.000.975,=C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/11 12:05:45.000.859,C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unit1.pas=C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unitfrmsalas.pas</Transaction>
+    <Transaction>2022/08/11 12:05:45.000.859,C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unit1.fmx=C:\Users\aluno\Desktop\Pré escritor-f11-bd-1\ee\Pré escritor\Unitfrmsalas.fmx</Transaction>
+    <Transaction>2022/08/19 22:59:45.000.675,=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 11:43:29.000.449,=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 11:49:20.000.666,=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit2.pas</Transaction>
+    <Transaction>2022/08/23 12:07:18.000.836,C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\UnitCadastroRedacoes.fmx=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit1.fmx</Transaction>
+    <Transaction>2022/08/23 12:07:18.000.836,C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\UnitCadastroRedacoes.pas=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 13:22:21.000.812,=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 13:51:59.000.777,C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\UnitCadastroProfessor.pas=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 13:51:59.000.777,C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\UnitCadastroProfessor.fmx=C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11-bd-6\ee\Pré escritor\Unit1.fmx</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/10 11:02:01.000.864,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/05/09 13:39:48.000.781,=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/05/09 13:42:07.000.823,C:\Users\aluno\Desktop\Pré escritor\Unitlogin.fmx=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/05/09 13:42:07.000.823,C:\Users\aluno\Desktop\Pré escritor\Unitlogin.pas=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/05/09 13:42:13.000.453,C:\Users\aluno\Desktop\Pré escritor\Project1login.dproj=C:\Users\aluno\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/05/09 14:04:37.000.227,=C:\Users\aluno\Desktop\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/05/09 14:05:00.000.706,=C:\Users\aluno\Desktop\Pré escritor\Unit2.pas</Transaction>
+    <Transaction>2022/05/09 14:05:13.000.105,=C:\Users\aluno\Desktop\Pré escritor\Unit2.pas</Transaction>
+    <Transaction>2022/05/09 14:05:33.000.191,C:\Users\aluno\Desktop\Pré escritor\Unit2Cadastro.pas=C:\Users\aluno\Desktop\Pré escritor\Unit2.pas</Transaction>
+    <Transaction>2022/05/09 14:05:33.000.191,C:\Users\aluno\Desktop\Pré escritor\Unit2Cadastro.fmx=C:\Users\aluno\Desktop\Pré escritor\Unit2.fmx</Transaction>
+    <Transaction>2022/05/16 14:54:18.000.300,=C:\Users\aluno\Desktop\Pré escritor-f4\Unittela_aluno.pas</Transaction>
+    <Transaction>2022/06/14 10:37:27.000.513,=C:\Users\aluno\Desktop\Pré escritor-f5\ee\Pré escritor\UnitPrincipal.pas</Transaction>
+    <Transaction>2022/06/27 13:14:26.000.545,=C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/06/27 13:33:02.000.560,C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\Unit1.pas=C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\UnitRedacoes.pas</Transaction>
+    <Transaction>2022/06/27 13:33:02.000.560,C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\Unit1.fmx=C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\UnitRedacoes.fmx</Transaction>
+    <Transaction>2022/06/27 13:52:22.000.328,=C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/06/27 13:53:16.000.772,C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\Unit1.fmx=C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\frames\frameRedacoesA.fmx</Transaction>
+    <Transaction>2022/06/27 13:53:16.000.772,C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\Unit1.pas=C:\Users\aluno\Desktop\Pré escritor-f8\ee\Pré escritor\frames\frameRedacoesA.pas</Transaction>
+    <Transaction>2022/06/29 08:41:12.000.241,=C:\Users\aluno\Desktop\Pré escritor-f10\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/07/10 14:33:53.000.878,=C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/07/10 14:35:40.000.528,C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\UnitEnviarRedacoesA.pas=C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/07/10 14:35:40.000.528,C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\UnitEnviarRedacoesA.fmx=C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\Unit1.fmx</Transaction>
+    <Transaction>2022/07/10 17:39:39.000.380,=C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\Unit1.pas</Transaction>
+    <Transaction>2022/07/10 17:40:39.000.179,C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\Unit1.fmx=C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\UnitDicasRedacao.fmx</Transaction>
+    <Transaction>2022/07/10 17:40:39.000.179,C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\Unit1.pas=C:\Users\caioa\Desktop\Pré escritor-f10-5\ee\Pré escritor\UnitDicasRedacao.pas</Transaction>
+    <Transaction>2022/07/20 20:04:37.000.804,C:\Users\User\Pictures\Unitlogin.pas=C:\Users\User\Desktop\Pré escritor-f10-6\ee\Pré escritor\Unitlogin.pas</Transaction>
+    <Transaction>2022/07/20 20:04:37.000.804,C:\Users\User\Pictures\Unitlogin.fmx=C:\Users\User\Desktop\Pré escritor-f10-6\ee\Pré escritor\Unitlogin.fmx</Transaction>
+    <Transaction>2022/07/20 20:45:44.000.811,C:\Users\User\Desktop\Pré escritor-f10-6\ee\Pré escritor\Project1login.dproj=C:\Users\User\Desktop\Pré escritor-f10-6\ee\Pré escritor\Project1login.dproj</Transaction>
+    <Transaction>2022/07/20 23:55:56.000.714,C:\Users\User\Desktop\Pré escritor-f10-7\ee\Pré escritor\Project1login.dproj=C:\Users\User\Desktop\Pré escritor-f10-7\ee\Pré escritor\Project1login.dproj</Transaction>
+    <Transaction>2022/07/23 19:20:24.000.340,C:\Users\User\Desktop\Pré escritor-f10-7\ee\Pré escritor\Unitlogin.pas=C:\Users\User\Pictures\Unitlogin.pas</Transaction>
+    <Transaction>2022/07/23 19:20:24.000.340,C:\Users\User\Desktop\Pré escritor-f10-7\ee\Pré escritor\Unitlogin.fmx=C:\Users\User\Pictures\Unitlogin.fmx</Transaction>
+    <Transaction>2022/07/25 17:30:21.000.168,C:\Users\User\Desktop\Pré escritor-f11\ee\Pré escritor\UnitPrincipalProf.pas=C:\Users\User\Desktop\Pré escritor-f11\ee\Pré escritor\UnitPrincipal.pas</Transaction>
+    <Transaction>2022/07/25 17:30:21.000.168,C:\Users\User\Desktop\Pré escritor-f11\ee\Pré escritor\UnitPrincipalProf.fmx=C:\Users\User\Desktop\Pré escritor-f11\ee\Pré escritor\UnitPrincipal.fmx</Transaction>
+    <Transaction>2022/07/25 17:33:31.000.434,=C:\Users\User\Desktop\Pré escritor-f11\ee\Pré escritor\UnitPrincipal.pas</Transaction>
+    <Transaction>2022/07/27 18:46:48.917,C:\Users\caioa\OneDrive\Área de Trabalho\Pré escritor-f11\ee\Pré escritor\UnitDicasRedacao.pas=</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

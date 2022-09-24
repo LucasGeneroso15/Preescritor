@@ -1,0 +1,41 @@
+inherited frmcadastrese_iPhone47in: Tfrmcadastrese_iPhone47in
+  ClientHeight = 647
+  ClientWidth = 375
+  DesignerMasterStyle = 0
+  inherited lytlogo: TLayout
+    Size.Width = 375.000000000000000000
+    inherited img_logo_cadastro: TImage
+      MultiResBitmap.Height = 512
+      MultiResBitmap.Width = 771
+      Size.Width = 375.000000000000000000
+    end
+  end
+  inherited lyt_tabcontrol: TLayout
+    inherited panel_cadastrese: TPanel
+      inherited lblcadastreseA: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited panel_tbc_cadastrese: TPanel
+      inherited cbox_sala_cadastrese: TComboBox
+        Size.Height = 30.000000000000000000
+      end
+      inherited chk_ciente_aluno_cadastrese: TCheckBox
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited lbl_informe_sala_aluno: TLabel
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+      end
+      inherited rec_btn_concluir: TRectangle
+        inherited btn_cadastrese_concluir_aluno: TButton
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited rect_btn_voltar: TRectangle
+        inherited btn_cadastrese_voltar_aluno: TButton
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+    end
+  end
+end
