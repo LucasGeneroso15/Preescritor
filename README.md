@@ -1,1 +1,1 @@
-# Preescritor
+# Preescritor Esse projeto foi idealizado para o projeto de tcc.
