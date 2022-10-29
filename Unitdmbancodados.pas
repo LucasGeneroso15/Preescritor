@@ -26,6 +26,15 @@ type
     adqProfessorsenha: TStringField;
     adqProfessorsala: TStringField;
     adqProfessorid: TAutoIncField;
+    dsRedacao: TADOConnection;
+    adqRedacao: TADOQuery;
+    adqRedacaoid_redacao: TAutoIncField;
+    adqRedacaotema: TStringField;
+    adqRedacaotexto: TStringField;
+    adqRedacaonota: TIntegerField;
+    adqRedacaoobservacao_professor: TStringField;
+    adqRedacaostatus: TStringField;
+    adqRedacaoid_aluno: TIntegerField;
   private
     { Private declarations }
   public

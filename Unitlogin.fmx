@@ -3,7 +3,7 @@ object frmlogin: Tfrmlogin
   Top = 0
   Caption = 'frmlogin'
   ClientHeight = 749
-  ClientWidth = 900
+  ClientWidth = 1003
   Fill.Kind = Solid
   StyleBook = StyleBook1
   FormFactor.Width = 320
@@ -117,19 +117,6 @@ object frmlogin: Tfrmlogin
         Text = 'N'#227'o consegue acessar '#225' sua conta?!'
         TabOrder = 0
       end
-      object btn_acesse_aqui: TButton
-        StyledSettings = [Family, Size]
-        Position.X = 721.000000000000000000
-        Position.Y = 203.000000000000000000
-        Size.Width = 105.000000000000000000
-        Size.Height = 17.000000000000000000
-        Size.PlatformDefault = False
-        StyleLookup = 'btn_entrar_loginStyle1dd'
-        TabOrder = 8
-        Text = 'Acesse aqui!'
-        TextSettings.Font.StyleExt = {00060000000000000004000000}
-        TextSettings.FontColor = claBlue
-      end
       object rec_btn_entrar: TRectangle
         Align = Bottom
         Fill.Color = claWhite
@@ -232,7 +219,7 @@ object frmlogin: Tfrmlogin
       object RadioButton1: TRadioButton
         Position.X = 175.000000000000000000
         Position.Y = 164.000000000000000000
-        TabOrder = 9
+        TabOrder = 8
         Text = 'Administrador'
         OnClick = RadioButton1Click
       end
@@ -276,6 +263,26 @@ object frmlogin: Tfrmlogin
           TextSettings.Font.StyleExt = {00060000000000000004000000}
           TextSettings.FontColor = claBlue
           OnClick = btn_cadastresePClick
+        end
+      end
+      object rec_aceseseAq: TRectangle
+        Fill.Color = claWhitesmoke
+        Position.X = 720.000000000000000000
+        Position.Y = 204.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        object btn_acesse_aqui: TButton
+          Align = Contents
+          StyledSettings = [Family, Size]
+          Size.Width = 89.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'btn_entrar_loginStyle1dd'
+          TabOrder = 8
+          Text = 'Acesse aqui!'
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claBlue
         end
       end
     end
@@ -2532,7 +2539,7 @@ object frmlogin: Tfrmlogin
         FileName = 'C:\Users\aluno\Downloads\Group 23.png'
       end>
     Align = MostTop
-    Size.Width = 900.000000000000000000
+    Size.Width = 1003.000000000000000000
     Size.Height = 281.000000000000000000
     Size.PlatformDefault = False
   end

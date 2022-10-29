@@ -12,6 +12,7 @@ object dmbancodados: Tdmbancodados
     Top = 40
   end
   object adqAluno: TADOQuery
+    Active = True
     Connection = conexao
     CursorType = ctStatic
     Parameters = <>
@@ -69,7 +70,6 @@ object dmbancodados: Tdmbancodados
     Top = 112
   end
   object adqProfessor: TADOQuery
-    Active = True
     ConnectionString = 
       'Provider=MSDASQL.1;Persist Security Info=False;Data Source=prees' +
       'critor'
@@ -95,7 +95,7 @@ object dmbancodados: Tdmbancodados
     end
     object adqProfessorsala: TStringField
       FieldName = 'sala'
-      Size = 10
+      Size = 100
     end
     object adqProfessorid: TAutoIncField
       FieldName = 'id'
@@ -105,5 +105,45 @@ object dmbancodados: Tdmbancodados
   object dsProfessor: TDataSource
     Left = 56
     Top = 272
+  end
+  object dsRedacao: TADOConnection
+    Left = 232
+    Top = 264
+  end
+  object adqRedacao: TADOQuery
+    Active = True
+    Connection = conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from redacao')
+    Left = 232
+    Top = 208
+    object adqRedacaoid_redacao: TAutoIncField
+      FieldName = 'id_redacao'
+      ReadOnly = True
+    end
+    object adqRedacaotema: TStringField
+      FieldName = 'tema'
+      Size = 8190
+    end
+    object adqRedacaotexto: TStringField
+      FieldName = 'texto'
+      Size = 8190
+    end
+    object adqRedacaonota: TIntegerField
+      FieldName = 'nota'
+    end
+    object adqRedacaoobservacao_professor: TStringField
+      FieldName = 'observacao_professor'
+      Size = 8190
+    end
+    object adqRedacaostatus: TStringField
+      FieldName = 'status'
+      Size = 255
+    end
+    object adqRedacaoid_aluno: TIntegerField
+      FieldName = 'id_aluno'
+    end
   end
 end

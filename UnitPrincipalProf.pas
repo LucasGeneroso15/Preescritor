@@ -60,16 +60,6 @@ type
     lyt_centerP: TLayout;
     rec_center: TRectangle;
     lbl_titulo: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Label12: TLabel;
     lyt_bt: TLayout;
     btn_dicas: TButton;
     btn_referencias: TButton;
@@ -79,40 +69,40 @@ type
     rec_calendario: TRectangle;
     calendario: TCalendar;
     img_atribuicao: TImage;
-    rec_atribuidas: TRectangle;
-    btn_Salas: TButton;
+    rec_NomeSala: TRectangle;
     rec_enviarNota: TRectangle;
     rec_calcularNota: TRectangle;
     rec_limparNota: TRectangle;
     img_calcular: TImage;
     btn_enviarNota: TButton;
     btn_limparNota: TButton;
-    recCenter: TRectangle;
-    recTop: TRectangle;
-    lblTitulo: TLabel;
-    Edit_TemaRedacao: TEdit;
-    rec_buscar_principal: TRectangle;
-    btn_buscar_instituicao: TButton;
-    imgAtencao: TImage;
-    lblEsc_atencao: TLabel;
-    Tmemo_obsProfessor: TMemo;
-    lblObs: TLabel;
-    DateEdit_Conclusao: TDateEdit;
-    DateEdit_Atribuicao: TDateEdit;
-    lbl_dataAtribuicao: TLabel;
-    lbl_dataConclusao: TLabel;
-    rec_anexar: TRectangle;
-    btn_anexarRD: TButton;
-    rec_limpar: TRectangle;
-    btn_limparRD: TButton;
+    imgSala: TImage;
+    imgAluno: TImage;
+    Rectangle1: TRectangle;
+    Rectangle3: TRectangle;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    lytSala: TLayout;
+    img_sala: TImage;
+    img_aluno: TImage;
+    LvSala: TListView;
+    lblNomeSala: TLabel;
+    memoProf: TMemo;
     procedure imgAddClick(Sender: TObject);
     procedure AnimationBtnFinish(Sender: TObject);
     procedure imgFecharClick(Sender: TObject);
     procedure imgAba1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
+    procedure btn_RecSairProfClick(Sender: TObject);
+    procedure Rectangle5Click(Sender: TObject);
+    procedure LvSalaClick(Sender: TObject);
+    procedure btn_enviarNotaClick(Sender: TObject);
   private
     procedure OpenMenu(open: Boolean);
     procedure MudarAba(img: TImage);
+    procedure AddLvSala(id_aluno: integer; nome, verificar: string);
+    procedure ListarALunos;
   public
 
   end;
@@ -126,8 +116,71 @@ var
 implementation
 {$R *.fmx}
 
-uses UnitRedacoes, frameRedacoesA, Unitlogin;
 
+uses Unitlogin, Unitdmbancodados, UnitPerfilProf;
+
+procedure  TFrmPrincipalProf.AddLvSala(id_aluno : integer;
+                                         nome, verificar : string);
+var
+img : TListItemImage;
+txt :  TListItemText;
+
+begin
+  with LvSala.Items.Add do
+     begin
+        height := 100;
+
+        img := TListItemImage(Objects.findDrawable ('imgAluno'));
+        img.Bitmap := imgAluno.Bitmap;
+
+        img := TListItemImage(Objects.findDrawable ('imgSala'));
+        img.Bitmap := imgSala.Bitmap;
+
+        txt := TlistItemText(objects.FindDrawable('textNomeAluno'));
+        txt.text := nome;
+
+        txt := TlistItemText(objects.FindDrawable('text_consultar'));
+        txt.text :=  verificar;
+
+
+     end;
+
+end;
+
+procedure TFrmPrincipalProf.ListarALunos;
+begin
+    dmbancodados.adqAluno.SQL.Text := 'Select * from aluno where sala = '''+ lblNomeSala.Text+ '''';
+    dmbancodados.adqAluno.Open;
+    dmbancodados.adqAluno.First;
+
+    While not (dmbancodados.adqAluno.Eof) do
+begin
+  AddLvSala (StrToInt(dmbancodados.adqAluno.FieldByName('id').AsString), dmbancodados.adqAluno.FieldByName('nome').AsString, 'verificar');
+  dmbancodados.adqAluno.Next;
+end;
+dmbancodados.adqAluno.Close;
+
+end;
+
+procedure TFrmPrincipalProf.LvSalaClick(Sender: TObject);
+begin
+    dmbancodados.adqRedacao.Active:=true;
+    dmbancodados.adqRedacao.SQL.clear;
+    dmbancodados.adqRedacao.SQL.add ('SELECT * from redacao where status = ''1''and id_aluno = :Pid_aluno');
+    dmbancodados.adqRedacao.Parameters.ParamByName('Pid_aluno').Value:= 16;
+    dmbancodados.adqRedacao.Open;
+    dmbancodados.adqRedacao.First;
+    memoProf.Text := dmbancodados.adqRedacao.FieldByName('texto').asString;
+    dmbancodados.adqRedacao.close;
+end;
+
+procedure TFrmPrincipalProf.FormShow(Sender: TObject);
+begin
+    dmbancodados.adqAluno.Active:=true;
+    lblNomeSala.Text := dmbancodados.adqProfessor.FieldByName('sala').AsString;
+    ListarALunos;
+
+end;
 
 
 
@@ -151,9 +204,27 @@ begin
     end;
 
 
+procedure TFrmPrincipalProf.btn_enviarNotaClick(Sender: TObject);
+begin
+        dmbancodados.adqRedacao.Active:=true;
+        dmbancodados.adqRedacao.SQL.clear;
+        dmbancodados.adqRedacao.SQL.add ('UPDATE redacao SET nota = :Pnota, observacao_professor = :Pobservacao, status = :Pstatus where id_aluno = :Pid_aluno');
+        dmbancodados.adqRedacao.Parameters.ParamByName('Pnota').Value:= edt_notaF_P.Text;
+        dmbancodados.adqRedacao.Parameters.ParamByName('Pobservacao').Value:= memo_obsP.Text;
+        dmbancodados.adqRedacao.Parameters.ParamByName('Pstatus').Value:= '2' ;
+        dmbancodados.adqRedacao.Parameters.ParamByName('Pid_aluno').Value:= 16;
+        dmbancodados.adqRedacao.ExecSQL;
+        showmessage('Devolvido para o aluno');
+end;
+
+procedure TFrmPrincipalProf.btn_RecSairProfClick(Sender: TObject);
+begin
+  frmPrincipalProf.Close;
+end;
+
 procedure TFrmPrincipalProf.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-frmlogin.visible := true
+application.Terminate;
 end;
 
 
@@ -206,14 +277,45 @@ begin
     AnimationBtn.Start;
 end;
 
-end.
-
+procedure TFrmPrincipalProf.Rectangle5Click(Sender: TObject);
+begin
+    frmPerfilProf.show;
 end;
+
+
+end.
 
 
 procedure TFrmPrincipalProf.FormShow(Sender: TObject);
 begin
     MudarAba(imgAba1);
+end;
+
+
+procedure TFrmPrincipalProf.AnimationBtnFinish(Sender: TObject);
+begin
+
+end;
+
+procedure TFrmPrincipalProf.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+
+end;
+
+procedure TFrmPrincipalProf.MudarAba(img: TImage);
+begin
+
+end;
+
+procedure TFrmPrincipalProf.OpenMenu(open: Boolean);
+begin
+
+end;
+
+procedure TFrmPrincipalProf.FormShow(Sender: TObject);
+begin
+ ListarALunos;
 end;
 
 procedure TFrmPrincipalProf.imgAba1Click(Sender: TObject);

@@ -15,7 +15,10 @@ uses
   Unitfrmadmin in 'Unitfrmadmin.pas' {frmadmin},
   Unitfrmsalas in 'Unitfrmsalas.pas' {frmsalas},
   UnitCadastroRedacoes in 'UnitCadastroRedacoes.pas' {FrmCadastroRedacao},
-  UnitCadastroProfessor in 'UnitCadastroProfessor.pas' {fmr_cadastroProfessor};
+  UnitCadastroProfessor in 'UnitCadastroProfessor.pas' {fmr_cadastroProfessor},
+  UnitPerfilAluno in 'UnitPerfilAluno.pas' {frmPerfilAluno},
+  UnitPerfilProf in 'UnitPerfilProf.pas' {frmPerfilProf},
+  UnitFolhaRedacao in 'UnitFolhaRedacao.pas' {frmFolhaRedacao};
 
 {$R *.res}
 
@@ -85,5 +88,8 @@ begin
   Application.CreateForm(Tfrmsalas, frmsalas);
   Application.CreateForm(TFrmCadastroRedacao, FrmCadastroRedacao);
   Application.CreateForm(Tfmr_cadastroProfessor, fmr_cadastroProfessor);
+  Application.CreateForm(TfrmPerfilAluno, frmPerfilAluno);
+  Application.CreateForm(TfrmPerfilProf, frmPerfilProf);
+  Application.CreateForm(TfrmFolhaRedacao, frmFolhaRedacao);
   Application.Run;
 end.

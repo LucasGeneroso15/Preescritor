@@ -41,6 +41,7 @@ type
     btn_cadastreseP: TButton;
     rec_cdstAluno: TRectangle;
     rec_cdstProfessor: TRectangle;
+    rec_aceseseAq: TRectangle;
     procedure btn_cadastreseAClick(Sender: TObject);
     procedure btn_entrar_loginClick(Sender: TObject);
 

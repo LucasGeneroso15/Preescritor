@@ -24,12 +24,12 @@ implementation
 
 {$R *.fmx}
 
-uses UnitEnviarRedacoes;
+uses UnitEnviarRedacoes, UnitFolhaRedacao;
 
 
 procedure TframeRedacoes_A.FrameClick(Sender: TObject);
 begin
-frmEnviarRedacoes.show;
+frmFolhaRedacao.show;
 end;
 
 end.

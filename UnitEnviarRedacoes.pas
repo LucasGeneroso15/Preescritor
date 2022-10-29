@@ -22,19 +22,10 @@ type
     rec_limpar: TRectangle;
     btn_limpar: TButton;
     rec_center: TRectangle;
-    memo1: TMemo;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Label1: TLabel;
-    DateEdit1: TDateEdit;
-    Edit3: TEdit;
-    Rectangle1: TRectangle;
-    Label2: TLabel;
-    Line1: TLine;
-    Button1: TButton;
-    OpenDialog1: TOpenDialog;
+    rec_redacao: TRectangle;
+    edt_redacao: TEdit;
     procedure img_voltar2Click(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -49,23 +40,9 @@ implementation
 
 {$R *.fmx}
 
-procedure TfrmEnviarRedacoes.Button1Click(Sender: TObject);
-var
-Lista : TStringList;
-begin
-if OpenDialog1.Execute then
-begin
+uses UnitFolhaRedacao;
 
-try
-Lista := TStringList.Create;
-Lista.LoadFromFile(OpenDialog1.filename);
-memo1.Lines := Lista;
 
-finally
-FreeAndNil(Lista);//DESTROI O OBJETO EM MEMORIA.
-end;
-end;
-end;
 
 procedure TfrmEnviarRedacoes.img_voltar2Click(Sender: TObject);
 begin

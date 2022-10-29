@@ -63,6 +63,7 @@ dmbancodados.adqAluno.Parameters.ParamByName('Pemail').Value:=edt_email_cadastre
 dmbancodados.adqAluno.Parameters.ParamByName('Psenha').Value:=edt_senha_cadastrese_aluno.text;
 dmbancodados.adqAluno.Parameters.ParamByName('Psala').Value:=cbox_sala_cadastrese.Items[cbox_sala_cadastrese.ItemIndex];
 dmbancodados.adqAluno.ExecSQL;
+dmbancodados.adqAluno.Close;
 showmessage('Aluno cadastrado com sucesso');
 {
 dmbancodados.adqusuario.SQL.clear;

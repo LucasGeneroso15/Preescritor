@@ -89,16 +89,6 @@ type
     lyt_ceterComp: TLayout;
     rec_center: TRectangle;
     lbl_titulo: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Label12: TLabel;
     lyt_bt: TLayout;
     btn_dicas: TButton;
     btn_referencias: TButton;
@@ -114,9 +104,31 @@ type
     btn_atribuidas: TButton;
     btn_concluidas: TButton;
     lyt_titulo: TLayout;
-    edt_nomealuno: TEdit;
-    edt_emailaluno: TEdit;
-    edt_salaaluno: TEdit;
+    RectAnimation1: TRectAnimation;
+    Rectangle1: TRectangle;
+    Rectangle3: TRectangle;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    Rectangle6: TRectangle;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Rectangle7: TRectangle;
+    Rectangle8: TRectangle;
+    Rectangle9: TRectangle;
+    Rectangle10: TRectangle;
     procedure FormShow(Sender: TObject);
     procedure imgAddClick(Sender: TObject);
     procedure AnimationBtnFinish(Sender: TObject);
@@ -129,6 +141,9 @@ type
     procedure btn_referenciasClick(Sender: TObject);
     procedure btn_citacaoDClick(Sender: TObject);
     procedure btn_citacaoIClick(Sender: TObject);
+    procedure lbl_usuarioClick(Sender: TObject);
+    procedure btn_RecSairAlunoClick(Sender: TObject);
+    procedure Rectangle8Click(Sender: TObject);
   private
     procedure OpenMenu(open: Boolean);
     procedure MudarAba(img: TImage);
@@ -151,7 +166,8 @@ var
 implementation
 {$R *.fmx}
 
-uses UnitRedacoes, frameRedacoesA, Unitlogin, Unitdmbancodados;
+uses UnitRedacoes, frameRedacoesA, Unitlogin, Unitdmbancodados, UnitPerfilAluno,
+  UnitFolhaRedacao;
 
 procedure  TFrmPrincipal.AddAtribuicoeslv (id_atribuicao: integer;
                                               atribuicao, dataA, dataD: string);
@@ -171,6 +187,12 @@ begin
        txt := TlistItemText(objects.FindDrawable('txt_dataD'));
       txt.text :=  dataD;
     end;
+end;
+
+
+procedure TFrmPrincipal.lbl_usuarioClick(Sender: TObject);
+begin
+frmPerfilAluno.show;
 end;
 
 procedure TFrmPrincipal.listaratribuicoes;
@@ -206,7 +228,7 @@ begin
    AddInstituicaoLv(1, 'Fatec', 'Dissertativa-Argumentativa');
    AddInstituicaoLv(1, 'Unesp', 'Dissertativa-Argumentativa');
    AddInstituicaoLv(1, 'Unicamp', 'Dissertativa-Argumentativa');
-    AddInstituicaoLv(1, 'ITA', 'Dissertativa-Argumentativa');
+   AddInstituicaoLv(1, 'ITA', 'Dissertativa-Argumentativa');
 end;
 
 procedure TFrmPrincipal.lv_instituicaoItemClick(const Sender: TObject;
@@ -260,6 +282,12 @@ begin
  ShowMessage ('Citações/Pensamentos Tem como finalidade fazer referência a alguma coisa, expressando uma ideia ou opinião de um texto, de um determinado autor. Há a necessidade do autor ser identificado')
  end;
 
+
+procedure TFrmPrincipal.btn_RecSairAlunoClick(Sender: TObject);
+begin
+      frmPrincipal.Close;
+end;
+
 procedure TFrmPrincipal.btn_referenciasClick(Sender: TObject);
 begin
 ShowMessage ('Dsponível em: <http://portal.mec.gov.br/ultimas-noticias/418-enem946573306/81381-conheca-as-cinco-competencias-cobradas-na-redacao-do-enem>');
@@ -271,14 +299,11 @@ ShowMessage ('https://www.portugues.com.br/gramatica/ortografia.html');
 end;
 procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-frmlogin.visible := true
+application.Terminate;
 end;
 
 procedure TFrmPrincipal.FormShow(Sender: TObject);
 begin
-  edt_nomealuno.Text := dmbancodados.adqAluno.FieldByName('nome').AsString;
-  edt_emailaluno.Text := dmbancodados.adqAluno.FieldByName('email').AsString;
-  edt_salaaluno.Text := dmbancodados.adqAluno.FieldByName('sala').AsString;
   listarInstituicao;
   listaratribuicoes;
 end;
@@ -331,6 +356,11 @@ begin
     end;
 
     AnimationBtn.Start;
+end;
+
+procedure TFrmPrincipal.Rectangle8Click(Sender: TObject);
+begin
+     frmPerfilALuno.show;
 end;
 
 end.
