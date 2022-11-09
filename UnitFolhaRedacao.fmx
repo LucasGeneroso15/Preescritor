@@ -64,12 +64,13 @@ object frmFolhaRedacao: TfrmFolhaRedacao
       object enviar: TMenuItem
         Locked = True
         Text = '&Enviar para corre'#231#227'o'
+        ImageIndex = 5
         OnClick = enviarClick
       end
       object imprimir: TMenuItem
         Locked = True
         Text = '&Imprimir'
-        ImageIndex = 5
+        ImageIndex = 7
         OnClick = imprimirClick
       end
       object sair: TMenuItem
@@ -441,6 +442,26 @@ object frmFolhaRedacao: TfrmFolhaRedacao
             FileName = 'C:\Users\User\Downloads\icons8-suporte-48.png'
           end>
         Name = 'icons8-suporte-48'
+      end
+      item
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Scale = 2.000000000000000000
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0096494441545847ED93DD0A80300885570F11D1FB3F52143D4D296CB10B13A7
+              D20AFCE0E02E3677F027055FE6546803CD2017A80F243A400BC84C4928C5DD84
+              D6C05E45533BB40626D09ACFA64A680D202E26B40628E176900C3952E04384BB
+              5353EE3F21CD7353DC5B61F38C3976A3B505D28A506FC8BFBA578083ED5D036C
+              9E9881988198819881EE150803922DF0E27F5B10BC404A17DFEB5CFC1DFBE69E
+              0000000049454E44AE426082}
+            FileName = 'C:\Users\User\Downloads\icons8-document-32.png'
+          end>
+        Name = 'icons8-document-32'
       end>
     Destination = <
       item
@@ -483,6 +504,12 @@ object frmFolhaRedacao: TfrmFolhaRedacao
         Layers = <
           item
             Name = 'icons8-suporte-48'
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icons8-document-32'
           end>
       end>
     Left = 128

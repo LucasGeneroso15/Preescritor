@@ -60,11 +60,6 @@ type
     lyt_centerP: TLayout;
     rec_center: TRectangle;
     lbl_titulo: TLabel;
-    lyt_bt: TLayout;
-    btn_dicas: TButton;
-    btn_referencias: TButton;
-    rec_dicas: TRectangle;
-    Rectangle2: TRectangle;
     rec_atribuicoes: TRectangle;
     rec_calendario: TRectangle;
     calendario: TCalendar;
@@ -96,8 +91,9 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn_RecSairProfClick(Sender: TObject);
     procedure Rectangle5Click(Sender: TObject);
-    procedure LvSalaClick(Sender: TObject);
     procedure btn_enviarNotaClick(Sender: TObject);
+    procedure LvSalaItemClickEx(const Sender: TObject; ItemIndex: Integer;
+      const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
   private
     procedure OpenMenu(open: Boolean);
     procedure MudarAba(img: TImage);
@@ -128,6 +124,8 @@ txt :  TListItemText;
 begin
   with LvSala.Items.Add do
      begin
+     tag := id_aluno;
+
         height := 100;
 
         img := TListItemImage(Objects.findDrawable ('imgAluno'));
@@ -142,7 +140,8 @@ begin
         txt := TlistItemText(objects.FindDrawable('text_consultar'));
         txt.text :=  verificar;
 
-
+        txt := TlistItemText(objects.FindDrawable('text_id'));
+        TlistItemText(objects.FindDrawable('text_consultar')).TagFloat := id_aluno;
      end;
 
 end;
@@ -162,12 +161,17 @@ dmbancodados.adqAluno.Close;
 
 end;
 
-procedure TFrmPrincipalProf.LvSalaClick(Sender: TObject);
+
+procedure TFrmPrincipalProf.LvSalaItemClickEx(const Sender: TObject;
+  ItemIndex: Integer; const LocalClickPos: TPointF;
+  const ItemObject: TListItemDrawable);
 begin
+    if (ItemObject <> nil) and (ItemObject.Name = 'text_id') then
+
     dmbancodados.adqRedacao.Active:=true;
     dmbancodados.adqRedacao.SQL.clear;
     dmbancodados.adqRedacao.SQL.add ('SELECT * from redacao where status = ''1''and id_aluno = :Pid_aluno');
-    dmbancodados.adqRedacao.Parameters.ParamByName('Pid_aluno').Value:= 16;
+    dmbancodados.adqRedacao.Parameters.ParamByName('Pid_aluno').Value:= LvSala.Selected.Tag;
     dmbancodados.adqRedacao.Open;
     dmbancodados.adqRedacao.First;
     memoProf.Text := dmbancodados.adqRedacao.FieldByName('texto').asString;

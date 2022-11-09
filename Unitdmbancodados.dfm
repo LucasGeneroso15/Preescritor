@@ -106,10 +106,6 @@ object dmbancodados: Tdmbancodados
     Left = 56
     Top = 272
   end
-  object dsRedacao: TADOConnection
-    Left = 232
-    Top = 264
-  end
   object adqRedacao: TADOQuery
     Active = True
     Connection = conexao
@@ -145,5 +141,10 @@ object dmbancodados: Tdmbancodados
     object adqRedacaoid_aluno: TIntegerField
       FieldName = 'id_aluno'
     end
+  end
+  object dsRedacao: TDataSource
+    DataSet = adqRedacao
+    Left = 232
+    Top = 272
   end
 end
